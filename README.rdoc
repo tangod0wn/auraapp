@@ -5,3 +5,4 @@ This is a web application built with Ruby on Rails.
 It is designed tol..asf
 
 This is a new line of text in my Readme.
+My name is Peter and I love coding!
