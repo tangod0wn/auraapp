@@ -29,4 +29,17 @@
 <%= link_to 'Create your business profile', new_business_profile_path %>
 
 
+<br>
+<h2> 
 
+		I work here:
+	
+
+</h2>
+
+<ul>
+	<% @profile.user.business_profiles.each do |business_profile| %>
+			<li><%= link_to business_profile.name, business_profile_path(business_profile) %></li>
+			<% end %>
+		</ul>
+ 
