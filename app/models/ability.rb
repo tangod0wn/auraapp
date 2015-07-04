@@ -8,11 +8,9 @@ class Ability
       if user.has_role? :admin
         can :manage, :all
       elsif user.has_role? :resident
-        can :manage, :events
-        can :manage, :messages
-        can :manage, :profiles
-      else
-        can :read, :all
+        can :manage, :events, user_id: user.id
+        can :manage, :messages, user_id: user.id
+        can :manage, :profiles, user_id: user.id
       end
     #
     # The first argument to `can` is the action you are giving the user
